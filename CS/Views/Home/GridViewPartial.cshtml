@@ -1,0 +1,21 @@
+@Html.DevExpress().GridView(settings => {
+    settings.Name = "GridView";
+    settings.KeyFieldName = "ProductID";
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
+
+    settings.Width = System.Web.UI.WebControls.Unit.Percentage(100);
+    settings.SettingsAdaptivity.AdaptivityMode = GridViewAdaptivityMode.HideDataCells;
+    settings.SettingsAdaptivity.AllowOnlyOneAdaptiveDetailExpanded = true;
+    
+    settings.CommandColumn.Visible = true;
+
+    settings.Columns.Add(column => {
+        column.FieldName = "ProductID";
+        column.ReadOnly = true;
+        column.EditFormSettings.Visible = DefaultBoolean.False;
+    });
+
+    settings.Columns.Add("ProductName");
+    settings.Columns.Add("UnitPrice");
+    settings.Columns.Add("UnitsOnOrder");
+}).Bind(Model).GetHtml()
