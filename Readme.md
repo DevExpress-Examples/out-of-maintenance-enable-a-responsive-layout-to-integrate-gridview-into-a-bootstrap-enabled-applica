@@ -10,7 +10,7 @@
 <!-- default file list end -->
 # Enable a responsive layout to integrate GridView into a Bootstrap-enabled application
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t361069)**
+**[[Run Online]](https://codecentral.devexpress.com/t361069/)**
 <!-- run online end -->
 
 
